@@ -9,12 +9,15 @@ import { regional } from "../graph-data-model";
 })
 export class TableComponent implements OnInit {
   constructor(private stockDataService: StockDataService) {}
-  reg: regional[];
+  public reg: any = [];
+  userlist: any = [];
 
   ngOnInit(): void {
     this.stockDataService.getDynamicData().subscribe(responseData => {
       console.log(responseData.data);
-      this.reg.push(responseData.data.regional);
+      for (let res of responseData.data.regional) {
+        this.reg.push(res);
+      }
     });
   }
 }
