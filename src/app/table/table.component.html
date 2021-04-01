@@ -1,6 +1,8 @@
-<table>
-  <tr ng-repeat="reg in regional">
-    <td>{{ reg }}</td>
-    <td>{{ reg }}</td>
-  </tr>
-</table>
+<div>
+  <table>
+    <tr *ngFor="let reg of regional; let i = index">
+      <td>{{ reg.loc }}</td>
+      <td>{{ reg.totalConfirmed }}</td>
+    </tr>
+  </table>
+</div>
