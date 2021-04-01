@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { StockDataService } from "../covid-data.service";
+import { regional } from "../graph-data-model.ts";
 
 @Component({
   selector: "app-table",
@@ -8,7 +9,7 @@ import { StockDataService } from "../covid-data.service";
 })
 export class TableComponent implements OnInit {
   constructor(private stockDataService: StockDataService) {}
-  public regional;
+  reg: regional[];
 
   ngOnInit(): void {
     this.stockDataService.getDynamicData().subscribe(responseData => {
