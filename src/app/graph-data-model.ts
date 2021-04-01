@@ -3,7 +3,7 @@ export interface covidData {
   value: number;
 }
 
-export interface regional{
+export interface regional {
   loc: string;
   confirmedCasesIndian: number;
   confirmedCasesForeign: number;

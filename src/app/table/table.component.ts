@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { StockDataService } from "../covid-data.service";
-import { regional } from "../graph-data-model.ts";
+import { regional } from "../graph-data-model";
 
 @Component({
   selector: "app-table",
@@ -14,7 +14,7 @@ export class TableComponent implements OnInit {
   ngOnInit(): void {
     this.stockDataService.getDynamicData().subscribe(responseData => {
       console.log(responseData.data);
-      this.regional.push(responseData.data);
+      this.reg.push(responseData.data.regional);
     });
   }
 }
