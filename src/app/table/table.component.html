@@ -1,8 +1,16 @@
 <div>
   <table>
+    <tr>
+      <th>State</th>
+      <th>Confirmed Cases</th>
+      <th>Recovered</th>
+      <th>Deaths</th>
+    </tr>
     <tr *ngFor="let reg of regional; let i = index">
       <td>{{ reg.loc }}</td>
       <td>{{ reg.totalConfirmed }}</td>
+      <td>{{ reg.discharged }}</td>
+      <td>{{ reg.deaths }}</td>
     </tr>
   </table>
 </div>
