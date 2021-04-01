@@ -7,11 +7,11 @@ import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { ChartComponent } from "./chart/chart.component";
-
+import { TableComponent } from "./table/table.component";
 import { map } from "rxjs/operators";
 
 @NgModule({
-  declarations: [AppComponent, ChartComponent],
+  declarations: [AppComponent, ChartComponent, TableComponent],
   imports: [
     BrowserModule,
     FormsModule,
